@@ -1,0 +1,29 @@
+{
+  "name":         "tomato",
+  "version":      "0.0.1",
+  "description":  "Pomodoro App",
+  "keywords":     [ "pomodoro", "it" ],
+  "maintainers":  [ {
+    "name":   "Zac Kleinpeter",
+    "email":  "zac@kleinpeter.org"
+  }],
+  "bugs": {
+    "mail": "zac@kleinpeter.com"
+  },
+  "repositories": [ {
+      "type":  "git",
+      "url":   "git@github.com:cajun/tomato.app.git"
+  } ],
+  "engine": "node >= 0.5",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script":  "1.1.1",
+    "docco":          "0.3.0",
+    "jasmine-node":   "1.0.6",
+    "less":           "1.1.2"
+  },
+  "os":       ["linux", "macos"],
+  "cpu":      ["x86", "x86_64"],
+  "engines":  ["v8", "ejs", "node", "rhino"]
+}

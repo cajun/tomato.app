@@ -1,0 +1,9 @@
+{
+  "id":          "org.kleinpeter.tomato",
+  "version":     "0.0.1",
+  "vendor":      "kleinpeter",
+  "type":        "web",
+  "main":        "index.html",
+  "title":       "Tomato",
+  "uiRevision":  "2"
+}
