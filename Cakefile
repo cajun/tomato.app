@@ -16,6 +16,9 @@ task 'spec', 'Run the spec files', ->
   jasmine()
 
 task 'build', 'Build Coffee and Less files into js and css files', ->
+  coffee = spawn( './node_modules/.bin/coffee', [ '--compile', '--output', './', 'depends.coffee' ] )
+  out_process coffee
+
   coffee = spawn( './node_modules/.bin/coffee', [ '--compile', '--output', 'source', 'coffee' ] )
   out_process coffee
 
@@ -27,7 +30,6 @@ task 'docs', 'Build the docco docs', ->
     util.print error
     util.print stdout
     util.print stderr
-
 
 jasmine = ( options = '', dir = './spec' ) ->
   process = spawn( './node_modules/.bin/jasmine-node', [ '--coffee', options, dir ] )

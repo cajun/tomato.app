@@ -1,5 +1,21 @@
 (function() {
-  var main;
+  var main, slidingPane;
+  slidingPane = {
+    kind: "SlidingPane",
+    flex: 1,
+    components: [
+      {
+        name: 'punchCard',
+        kind: 'Tomato.PunchCard'
+      }, {
+        name: 'todo',
+        kind: 'Tomato.ToDo'
+      }, {
+        name: 'hourGlass',
+        kind: 'Tomato.HourGlass'
+      }
+    ]
+  };
   main = {
     name: "Tomato.Main",
     kind: enyo.VFlexBox,
@@ -7,24 +23,7 @@
       {
         kind: "PageHeader",
         content: "Tomato"
-      }, {
-        kind: "SlidingPane",
-        flex: 1,
-        components: [
-          {
-            name: 'left',
-            width: '200px'
-          }, {
-            name: 'middle',
-            width: '200px',
-            peekWidth: 68
-          }, {
-            name: 'right',
-            flex: 1,
-            onResize: 'slidingResize'
-          }
-        ]
-      }
+      }, slidingPane
     ]
   };
   enyo.kind(main);
